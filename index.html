@@ -1,0 +1,39 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, shrink-to-fit=no" />
+    <title>Marfrig - Form</title>
+    <meta property="og:url" content="https://docs.google.com/forms/d/e/1FAIpQLSfxbmu8IpLWtKTGtjPPZnos05mS8xfPA9ONuCqd8p-ShHZQbw/viewform?usp=preview">
+    <meta name="twitter:url" content="https://docs.google.com/forms/d/e/1FAIpQLSfxbmu8IpLWtKTGtjPPZnos05mS8xfPA9ONuCqd8p-ShHZQbw/viewform?usp=preview">
+    <meta name="url" content="https://docs.google.com/forms/d/e/1FAIpQLSfxbmu8IpLWtKTGtjPPZnos05mS8xfPA9ONuCqd8p-ShHZQbw/viewform?usp=preview">
+    <script type="text/javascript">
+        let seconds = 5;
+        const redirectUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfxbmu8IpLWtKTGtjPPZnos05mS8xfPA9ONuCqd8p-ShHZQbw/viewform?usp=preview";        
+        function update_timer() {
+            document.getElementById("timer").innerHTML = seconds;
+            seconds--;
+            if (seconds < 0) {
+                clearInterval(timer);
+                window.location.href = redirectUrl;
+            }
+        }        
+        const timer = setInterval(update_timer, 1000);
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("redirect-link").href = redirectUrl;
+            update_timer();
+        });
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+<iframe width="2" height="2" src="#https://go.hotmart.com/A1939024g?ap=fb73&src=form" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <body>
+    <div class="container">
+      <img src="https://www.marfrig.com.br/pt/Style%20Library/images/logo-marfrig.png" class="logo" />
+      <div class="box">
+        <h1>Redirecionando para o Formulario...</h1>
+        <div id="timer"></div>
+      </div>
+      <div class="mensagem">Se a página não redirecionar, <a href="#" id="redirect-link">clique aqui</a></div>
+    </div>
+  </body>
+</html>
